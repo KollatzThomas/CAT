@@ -29,11 +29,21 @@ integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" /
 <div id="map"></div>
 <script>
             const map = L.map('map').setView([51.1657, 10.4515], 5);
+            const redIcon = L.divIcon({
+            className: '',
+            html: `<svg width="24" height="36" viewBox="0 0 24 36" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24c0-6.6-5.4-12-12-12z" fill="red"/>
+            </svg>`,
+            iconSize: [24, 36],
+            iconAnchor: [12, 36],
+            popupAnchor: [0, -36]
+            });
             L.Popup.prototype.options.maxHeight = 300;
             const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
                 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
+<!-- https://www.christliche-ag-tanz.de/tanzanleiter-innen -->
            L.marker([51.5,12]).addTo(map).bindPopup(`<b>Simone Kluge</b>
            06110 Halle/Saale <br>
            <br><strong>Tanzangebote</strong> Kreistanz, meditativer Tanz, Volkstanz, freies Bewegen, Improvisation, Tänze in der Trauerarbeit, Bewegte Bibelarbeit, Tänze in Liturgie und Spiritualität<br>
@@ -423,6 +433,42 @@ integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" /
            <br><strong>Tanzangebote</strong> Kreistanz - meditativ und zu Melodien der interanionalen Folklore - regelmäßige Gruppen in Aubstadt und Mellrichstadt - jahreszeitliche Kursanbegote im Mehrgenarationenhaus Bad Königshofen. Ich biete Fortbildungen im Kindergottesdienstbereich und für Lehrer in der Grundschule (Tanzen mit Schüler) an.<br>
            <br><strong>Tanzausbildung</strong> Ausbildung bei Petra Maria Knell Griechisches Seminar bei Kyriakos Chamalidis Seminare bei M. Saurer, Dr. Siegfried Macht, Gerd Kötter, W. Vasseur<br/>
            
+           `);
+<!-- https://christliche-ag-tanz.de/regionalgruppen -->
+           L.marker([54.466667,9.833333], { icon: redIcon }).addTo(map).bindPopup(`<b>Regionalgruppe an der Küste</b>
+           <br><br>
+           <strong>&#x1F4E7;</strong> <a href="mailto:kontakt@astrid-thiele-petersen.de">Astrid Thiele-Petersen</a><br><br>
+           <strong>&#x1F310;</strong> <a href="https://christliche-ag-tanz.de/an-der-kueste">https://christliche-ag-tanz.de/an-der-kueste</a>
+           `);
+           L.marker([50.733333,7.1], { icon: redIcon }).addTo(map).bindPopup(`<b>Regionalgruppe Bonn plus</b>
+           <br><br>
+           <strong>&#x1F4E7;</strong> <a href="mailto:theresahuether@gmx.de">Theresa Hüther</a><br><br>
+           <strong>&#x1F310;</strong> <a href="https://christliche-ag-tanz.de/bonn-plus">https://christliche-ag-tanz.de/bonn-plus</a>
+           `);
+           L.marker([49.366667,12.25], { icon: redIcon }).addTo(map).bindPopup(`<b>Regionalgruppe Franken - Oberpfalz</b>
+           <br><br>
+           <strong>&#x1F4E7;</strong> <a href="mailto:andreakick@web.de">Andrea Kick</a><br><br>
+           <strong>&#x1F310;</strong> <a href="https://christliche-ag-tanz.de/franken-oberpfalz">https://christliche-ag-tanz.de/franken-oberpfalz</a>
+           `);
+           L.marker([50.816667,8.766667], { icon: redIcon }).addTo(map).bindPopup(`<b>Regionalgruppe Mitte</b>
+           <br><br>
+           <strong>&#x1F4E7;</strong> <a href="mailto:andrea.woellenstein@gmail.com">Andrea Wöllenstein</a><br><br>
+           <strong>&#x1F310;</strong> <a href="https://christliche-ag-tanz.de/mitte">https://christliche-ag-tanz.de/mitte</a>
+           `);
+           L.marker([46.882352,7.331276], { icon: redIcon }).addTo(map).bindPopup(`<b>Regionalgruppe München &amp; Südbayern</b>
+           <br><br>
+           <strong>&#x1F4E7;</strong> <a href="mailto:siju.lorz@kabelmail.de">Juliane Lorz</a><br><br>
+           <strong>&#x1F310;</strong> <a href="https://christliche-ag-tanz.de/münchen-südbayern">https://christliche-ag-tanz.de/münchen-südbayern</a>
+           `);
+           L.marker([51.833333,7.416667], { icon: redIcon }).addTo(map).bindPopup(`<b>Regionalgruppe Münster-Osnabrück</b>
+           <br><br>
+           <strong>&#x1F4E7;</strong> <a href="mailto:mariele.klueppel.neumann@gmx.de">Mariele Klüppel-Neumann</a><br><br>
+           <strong>&#x1F310;</strong> <a href="https://christliche-ag-tanz.de/münster-osnabrück">https://christliche-ag-tanz.de/münster-osnabrück</a>
+           `);
+           L.marker([48.483333,7.933333], { icon: redIcon }).addTo(map).bindPopup(`<b>Regionalgruppe Südwest</b>
+           <br><br>
+           <strong>&#x1F4E7;</strong> <a href="mailto:kultur.tanz.musik@gmail.com">Claudia Schimmer</a><br><br>
+           <strong>&#x1F310;</strong> <a href="https://christliche-ag-tanz.de/südwest">https://christliche-ag-tanz.de/südwest</a>
            `);
 </script>
 </body>
